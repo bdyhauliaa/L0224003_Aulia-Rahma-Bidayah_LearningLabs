@@ -1,173 +1,90 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('images/paris-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Solo</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link ke FontAwesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
 
-header {
-    background-color: rgba(135, 206, 250, 0.9); /* Warna baby blue transparan */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
+    <!-- Homepage -->
+    <header>
+        <h1>Welcome to Solo</h1>
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i>About Solo</a></li>
+                <li><a href="#feedback"><i class="fas fa-comments"></i>Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
 
-header::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 5px;
-    background: linear-gradient(to right, #00bfff, #1e90ff);
-}
+    <main id="home">
+        <section class="banner">
+            <h2>Explore the City of Culture</h2>
+            <p>Discover the beauty, culture, and history of Solo.</p>
+        </section>
+        
+        <section class="highlights">
+            <h3>Highlights</h3>
+            <ul>
+                <li><i class="fas fa-landmark"></i>Pura Mangkunegaran</li>
+                <li><i class="fas fa-paint-brush"></i>Museum Batik Danar Hadi</li>
+                <li><i class="fas fa-church"></i>Pasar Gede</li>
+            </ul>
+        </section>
+    </main>
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
+    <!-- About Solo -->
+    <main id="about" style="display:none;">
+        <section>
+            <h2>Fakta Menarik Solo</h2>
+            <article>
+                <h3>Pura Mangkunegaran</h3>
+                <img src="image1.jpeg" alt="Pura Mangkunegaran">
+                <p>Pura Mangkunegaran adalah istana resmi Kadipaten Mangkunegaran di Surakarta dan tempat tinggal para Adipati Mangkunegaran. Awalnya, bangunan ini merupakan kediaman Patih Sindureja dari Kesunanan Surakarta, yang kemudian diserahkan kepada Mangkunegara I setelah Perjanjian Salatiga tahun 1757...</p>
+            </article>
+            <article>
+                <h3>Museum Batik Danar Hadi</h3>
+                <img src="image2.jpeg" alt="Museum Batik Danar Hadi">
+                <p>House of Danar Hadi (HDH) di Solo, Jawa Tengah, adalah kompleks wisata heritage yang menampilkan batik dan aspek budayanya. Didirikan oleh PT Batik Danar Hadi pada 2008...</p>
+            </article>
+            <article>
+                <h3>Pasar Gede</h3>
+                <img src="image3.jpeg" alt="Pasar Gede">
+                <p>Pasar Gede Harjonagoro adalah pasar terbesar di Surakarta, didirikan pada masa kolonial Belanda dan dirancang oleh arsitek Thomas Karsten...</p>
+            </article>
+        </section>
+    </main>
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+    <!-- Feedback -->
+    <main id="feedback" style="display:none;">
+        <section>
+            <h2>We Value Your Feedback</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit"><i class="fas fa-paper-plane"></i>Submit Feedback</button>
+            </form>
+        </section>
+    </main>
 
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+    <footer>
+        <p>Learning Labs 2024 L0224003 Aulia Rahma Bidayah</p>
+    </footer>
 
-nav ul li a:hover {
-    color: #ffc107;
-}
-
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Putih transparan */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.banner {
-    text-align: center;
-    margin-bottom: 20px;
-    background: #00bfff; /* Mengubah warna latar belakang menjadi biru */
-    padding: 60px 20px;
-    color: white;
-    border-radius: 8px;
-}
-
-.highlights {
-    margin-top: 20px;
-}
-
-.highlights ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-.highlights ul li {
-    background-color: #00bfff; /* Warna biru untuk highlights */
-    color: white;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.highlights ul li:hover {
-    background-color: #1e90ff;
-}
-
-article {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: transform 0.2s;
-    background-color: #f8f9fa; /* Warna latar belakang artikel */
-}
-
-article:hover {
-    transform: scale(1.02);
-}
-
-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: transform 0.2s;
-}
-
-article img:hover {
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: rgba(135, 206, 250, 0.9); /* Warna baby blue transparan */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin : 10px 0 5px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #218838;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-    vertical-align: middle;
-}
-
-.card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
-    padding: 15px;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.02);
-}
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
