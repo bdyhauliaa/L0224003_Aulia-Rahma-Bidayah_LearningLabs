@@ -1,24 +1,215 @@
-// Navigasi sederhana
-const links = document.querySelectorAll('nav ul li a');
-const sections = document.querySelectorAll('main');
+/* Global Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/paris-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
 
-links.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = e.target.getAttribute('href').substring(1);
-        sections.forEach(section => {
-            section.style.display = 'none';
-        });
-        document.getElementById(target).style.display = 'block';
-    });
-});
+/* Header */
+header {
+    background-color: rgba(135, 206, 250, 0.9); /* Baby blue transparent */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
 
-// Interaktivitas form feedback
-document.addEventListener('DOMContentLoaded', function() {
-    const feedbackForm = document.querySelector('form');
-    feedbackForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Thank you for your feedback!');
-        feedbackForm.reset();
-    });
-});
+/* Line below header */
+header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: linear-gradient(to right, #00bfff, #1e90ff);
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center navigation */
+}
+
+nav ul li {
+    display: inline-block; /* Inline block for better control */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Banner Section */
+.banner {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #00bfff; /* Blue background */
+    padding: 60px 20px;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Highlights Section */
+.highlights {
+    margin-top: 20px;
+}
+
+.highlights ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.highlights ul li {
+    background-color: #00bfff; /* Blue background for highlights */
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.highlights ul li:hover {
+    background-color: #1e90ff;
+}
+
+/* Article Section */
+article {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    background-color: #f8f9fa; /* Light background */
+}
+
+article:hover {
+    transform: scale(1.02);
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+article img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(135, 206, 250, 0.9); /* Baby blue transparent */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Icon Styles */
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Card Component */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Media Query for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .banner {
+        padding: 40px 20px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items */
+        margin: 5px 0;
+    }
+
+    .highlights ul li {
+        padding: 8px;
+    }
+}
