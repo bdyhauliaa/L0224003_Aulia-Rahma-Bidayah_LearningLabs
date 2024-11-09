@@ -1,0 +1,20 @@
+Deskripsi Singkat
+Website "Welcome to Solo" adalah sebuah portal informatif untuk memperkenalkan kota Solo kepada pengunjung. Situs ini memberikan gambaran tentang keindahan budaya, tempat wisata bersejarah, dan situs terkenal di Solo, seperti Pura Mangkunegaran, Museum Batik Danar Hadi, dan Pasar Gede.
+
+Struktur Halaman
+Homepage: Halaman ini menyajikan pengantar singkat tentang Solo dengan latar belakang yang menarik, serta bagian sorotan (highlights) dari tempat-tempat terkenal di kota ini.
+About Solo: Menyajikan artikel-artikel detail mengenai tempat-tempat ikonik di Solo, lengkap dengan gambar ilustrasi dan deskripsi sejarah, keunikan, dan informasi menarik lainnya.
+Feedback: Bagian ini berisi form yang memungkinkan pengunjung untuk memberikan umpan balik atau pertanyaan terkait website. Form ini memiliki kolom input untuk nama, email, dan pesan.
+
+Teknologi yang Digunakan
+HTML5: Untuk struktur dasar halaman.
+CSS3: Untuk memberikan tampilan menarik dengan latar belakang dan tata letak yang responsif.
+JavaScript: Menyediakan navigasi sederhana antar bagian halaman dan validasi form.
+Font Awesome: Menyediakan ikon-ikon tambahan untuk mempercantik navigasi dan tombol pada form.
+
+Fitur Utama
+Desain Interaktif: Penggunaan JavaScript untuk mengubah tampilan konten yang ditampilkan saat tautan navigasi diklik.
+Form Feedback: Tersedia form untuk menerima masukan dari pengunjung, dan notifikasi setelah form berhasil dikirim.
+Responsive Layout: Pengaturan CSS untuk membuat tampilan yang enak dilihat baik pada perangkat desktop maupun mobile.
+Penutup
+Website ini adalah alat yang ideal untuk memperkenalkan Solo sebagai destinasi wisata budaya kepada pengunjung. Fungsionalitas yang sederhana namun informatif, menjadikan website ini mudah digunakan dan menarik bagi pengunjung.
